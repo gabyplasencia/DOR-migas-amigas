@@ -9,23 +9,34 @@ const Contacto = () => {
     }
 
     return (
-        <section id="contacto" className="container">
-            <h2 className="section__title">{t("contactanos")}</h2>
-            <form className="contact__form" method="/" onSubmit={send}>
-                <label htmlFor="name">{t("nombre")}</label>
-                <input type="text" id="name" name="name" placeholder="María"/>
+        <section id="contacto">
+            <div className="contacto-wrapper">
+                <h2 className="contacto-titulo">{t("contactanos")}</h2>
+                <form className="contact__form" method="/" onSubmit={send}>
 
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="maria@email.com"/>
+                    <div className="wrapper-input">
+                    <label htmlFor="name">{t("nombre")}:</label>
+                    <input type="text" id="name" name="name" placeholder="María Pérez" required/>
+                    </div>
 
-                <label htmlFor="asunto">{t("asunto")}</label>
-                <input type="text" id="asunto" name="asunto" placeholder={t("placeholderAsunto")}/>
+                    <div className="wrapper-input">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="maria@email.com" required/>
+                    </div>
 
-                <label htmlFor="message">{t("mensaje")}</label>
-                <textarea id="message" name="message" placeholder={t("placeholderMensaje")}></textarea>
+                    <div className="wrapper-input">
+                    <label htmlFor="asunto">{t("asunto")}:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder={t("placeholderAsunto")} required/>
+                    </div>
 
-                <button type="submit" className="contact__btn">{t("enviar")}</button>
-            </form>
+                    <div className="wrapper-input">
+                    <label htmlFor="message">{t("mensaje")}:</label>
+                    <textarea id="message" name="message" placeholder={t("placeholderMensaje")} required></textarea>
+                    </div>
+
+                    <button type="submit" className="contact__btn">{t("enviar")}</button>
+                </form>
+            </div>
         </section>
     )
 }
