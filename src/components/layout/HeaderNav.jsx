@@ -30,6 +30,9 @@ const HeaderNav = () => {
                 <li className="nav-item">
                     <NavLink to="/pasteleriabolleria" aria-label={t("aria-pasteleria")}>{t("navPasteleria")}</NavLink>
                 </li>
+                <li className="nav-item">
+                    <NavLink to="/contacto" aria-label={t("aria-contacto")}>{t("navContacto")}</NavLink>
+                </li>
             </ul>
         </nav>
         <select className="lan-select" defaultValue={i18n.language} onChange={onChangeLang}>{

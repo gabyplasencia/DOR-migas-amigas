@@ -7,6 +7,7 @@ import Empanadas from "../views/Empanadas.jsx";
 import Error404 from "../views/Error404.jsx";
 import Footer from "../components/layout/Footer.jsx";
 import HeaderNav  from "../components/layout/HeaderNav.jsx";
+import Contacto from "../views/Contacto.jsx";
 
 const MisRutas = () => {
 return (
@@ -15,13 +16,13 @@ return (
             <HeaderNav />
             <div role="main">
                 <Routes>
-                <Route path="/" element={<Principal />} />
-                <Route path="/principal" element={<Principal />} />
-                <Route path="/panaderia" element={<Panaderia />} />
-                <Route path="/pasteleriabolleria"
-                element={<PasteleriaBolleria />} />
-                <Route path="/empanadas" element={<Empanadas />} />
-                <Route path="*" element={<Error404 />} />
+                    <Route path="/" element={<Principal />} />
+                    <Route path="/principal" element={<Principal />} />
+                    <Route path="/panaderia" element={<Panaderia />} />
+                    <Route path="/pasteleriabolleria" element={<PasteleriaBolleria />} />
+                    <Route path="/empanadas" element={<Empanadas />} />
+                    <Route path="/contacto" element={<Contacto />} />
+                    <Route path="*" element={<Error404 />} />
                 </Routes>         
             </div>
             <Footer />
