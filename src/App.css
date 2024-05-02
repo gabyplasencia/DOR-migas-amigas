@@ -333,6 +333,24 @@ select {
   font-size: 1.1rem;
   padding: 0.5rem;
   border: 1px solid rgba(93, 53, 0, 0.626);
+  z-index: 1;
+  transition: all 150ms ease;
+}
+
+.producto:hover {
+  scale: 1.03;
+  filter: blur(0px);
+  z-index: 3;
+}
+
+.wrapper-productos:hover .producto {
+  filter: blur(20px);
+  z-index: 1;
+}
+
+.wrapper-productos .producto:hover {
+  filter: blur(0px);
+  z-index: 1;
 }
 
 .wrapper-p {
